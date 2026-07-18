@@ -22,6 +22,55 @@ async function iniciarPagina() {
 
     }
 
+    // ===========================
+// SEO DINÁMICO
+// ===========================
+
+document.title =
+`${negocio.nombre} | Vitrina Virtual de Mujeres Emprendedoras`;
+
+document
+    .getElementById("meta-description")
+    .setAttribute(
+        "content",
+        negocio.descripcion_corta || negocio.descripcion || ""
+    );
+
+document
+    .getElementById("meta-og-title")
+    .setAttribute(
+        "content",
+        negocio.nombre
+    );
+
+document
+    .getElementById("meta-og-description")
+    .setAttribute(
+        "content",
+        negocio.descripcion_corta || negocio.descripcion || ""
+    );
+
+document
+    .getElementById("meta-og-image")
+    .setAttribute(
+        "content",
+        negocio.portada || negocio.logo
+    );
+
+document
+    .getElementById("meta-og-url")
+    .setAttribute(
+        "content",
+        `${window.location.origin}/emprendimiento.html?slug=${negocio.slug}`
+    );
+
+document
+    .getElementById("canonical-url")
+    .setAttribute(
+        "href",
+        `${window.location.origin}/emprendimiento.html?slug=${negocio.slug}`
+    );
+
     document.getElementById("breadcrumb-name").textContent = negocio.nombre;
 
     document.getElementById("business-name").textContent = negocio.nombre;
