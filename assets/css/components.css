@@ -1,0 +1,62 @@
+/* ===================================
+   EMPTY STATE
+=================================== */
+
+.empty-state{
+
+    background:var(--white);
+
+    padding:60px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.empty-state i{
+
+    font-size:4rem;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+    display:block;
+
+}
+
+.empty-state h3{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.empty-state p{
+
+    color:#666;
+
+    margin:0;
+
+}
+
+.business-description{
+
+    color:#6c757d;
+
+    font-size:.95rem;
+
+    margin:12px 0;
+
+    line-height:1.5;
+
+    min-height:48px;
+
+}
+

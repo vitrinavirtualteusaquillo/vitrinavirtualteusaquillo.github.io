@@ -1,0 +1,1 @@
+console.log("Vitrina Virtual iniciada.");

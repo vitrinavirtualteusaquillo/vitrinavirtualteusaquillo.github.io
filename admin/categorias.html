@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Categorías | Admin</title>
+
+    <meta
+        name="description"
+        content="DESCRIPCIÓN DE LA PÁGINA">
+
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+
+</head>
+
+<div class="modal fade" id="modalCategoria" tabindex="-1">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+
+                    Nueva categoría
+
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Nombre
+
+                    </label>
+
+                    <input
+                        id="categoriaNombre"
+                        type="text"
+                        class="form-control">
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Descripción
+
+                    </label>
+
+                    <textarea
+                        id="categoriaDescripcion"
+                        class="form-control"
+                        rows="3"></textarea>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+
+                        Icono Bootstrap
+
+                    </label>
+
+                    <input
+                        id="categoriaIcono"
+                        type="text"
+                        class="form-control"
+                        placeholder="bi bi-heart">
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    id="btnGuardarCategoria"
+                    class="btn btn-primary">
+
+                    Guardar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="adminSidebar"></div>
+
+    <!-- Contenido -->
+    <main>
+<div class="admin-content">
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h1>Categorías</h1>
+
+        <button
+            id="btnNuevaCategoria"
+            class="btn btn-primary">
+
+            Nueva categoría
+
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+
+                        <th>Slug</th>
+
+                        <th>Estado</th>
+
+                        <th width="180">Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaCategorias">
+
+                </tbody>
+
+            </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../assets/js/config.js"></script>
+
+<script src="../assets/js/services/supabase.js"></script>
+
+<script src="../assets/js/services/auth.service.js"></script>
+
+<script src="../assets/js/services/categorias.service.js"></script>
+
+<script src="../assets/js/admin/categorias.js"></script>
+
+<script src="../assets/js/components/admin-sidebar.js"></script>
+
+<script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

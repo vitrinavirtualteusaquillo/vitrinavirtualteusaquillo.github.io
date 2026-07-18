@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Emprendimiento | Vitrina Virtual de Mujeres Emprendedoras</title>
+
+    <meta
+        name="description"
+        content="DESCRIPCIÓN DE LA PÁGINA">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/components.css">
+
+    <link rel="stylesheet" href="assets/css/pages.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header id="navbar"></header>
+
+    <!-- Contenido -->
+    <main>
+
+    <main>
+
+    <!-- Breadcrumb -->
+    <section class="py-3 bg-white">
+
+        <div class="container">
+
+            <nav class="breadcrumb mb-0">
+
+                <a href="index.html">Inicio</a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <a href="emprendimientos.html">Emprendimientos</a>
+
+                <i class="bi bi-chevron-right"></i>
+
+                <span id="breadcrumb-name">Emprendimiento</span>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+    <!-- Banner -->
+    <section class="business-banner">
+
+        <img
+            id="business-cover"
+            src="assets/img/placeholders/cover.jpg"
+            alt="Portada del emprendimiento"
+            class="business-banner-img">
+
+    </section>
+
+    <!-- Perfil -->
+    <section class="profile-header">
+
+        <div class="container text-center">
+
+            <img
+                id="business-logo"
+                class="profile-logo"
+                src="assets/img/placeholders/logo-placeholder.png"
+                alt="Logo del emprendimiento">
+
+            <h1 id="business-name">
+
+                Nombre del emprendimiento
+
+            </h1>
+
+            <span
+                id="business-category"
+                class="badge bg-secondary">
+
+                Categoría
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery">
+
+        <div class="container">
+
+            <div
+                id="gallery"
+                class="row g-4">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Descripción -->
+    <section class="description py-5">
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Descripción
+
+            </h2>
+
+            <p id="business-description"></p>
+
+        </div>
+
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact py-5">
+
+        <div class="container">
+
+            <div class="contact-card">
+
+                <h2 class="mb-4">
+
+                    Información de contacto
+
+                </h2>
+
+                <div id="contact-info"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/services/supabase.js"></script>
+
+<!-- Servicios -->
+<script src="assets/js/services/emprendimientos.service.js"></script>
+
+<!-- Componentes -->
+<script src="assets/js/components/navbar.js"></script>
+<script src="assets/js/components/footer.js"></script>
+
+
+<!-- Página -->
+<script src="assets/js/pages/emprendimiento.js"></script>
+
+<!-- App -->
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>

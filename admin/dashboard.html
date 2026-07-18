@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Plataforma Adminiostración de Emprendimientos</title>
+
+    <meta
+        name="description"
+        content="DESCRIPCIÓN DE LA PÁGINA">
+
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="../assets/css/components.css">
+
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/admin.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="adminSidebar"></div>
+
+    <!-- Contenido -->
+    <main>
+    <div class="admin-content">
+
+<div class="container py-4">
+
+    <h1 class="mb-4">
+        Dashboard
+    </h1>
+
+    <div class="row g-4 mb-5">
+
+        <div class="col-md-4">
+
+            <div class="card">
+
+                <div class="card-body text-center">
+
+                    <h6>Categorías</h6>
+
+                    <h2 id="totalCategorias">0</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card">
+
+                <div class="card-body text-center">
+
+                    <h6>Emprendimientos</h6>
+
+                    <h2 id="totalEmprendimientos">0</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card">
+
+                <div class="card-body text-center">
+
+                    <h6>Destacados</h6>
+
+                    <h2 id="totalDestacados">0</h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-header">
+
+            Emprendimientos destacados
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Categoría</th>
+
+                        <th>Nombre</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaDestacados">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+     <!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../assets/js/config.js"></script>
+
+<script src="../assets/js/services/supabase.js"></script>
+
+<script src="../assets/js/services/auth.service.js"></script>
+
+<script src="../assets/js/services/categorias.service.js"></script>
+
+<script src="../assets/js/services/emprendimientos.service.js"></script>
+
+<script src="../assets/js/admin/dashboard.js"></script>
+<script src="../assets/js/components/admin-sidebar.js"></script>
+
+<script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

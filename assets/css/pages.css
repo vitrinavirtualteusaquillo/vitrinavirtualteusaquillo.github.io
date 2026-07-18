@@ -1,0 +1,233 @@
+/* ===================================
+   ABOUT HOME
+=================================== */
+
+.institution-logo{
+
+    max-height:90px;
+
+    width:auto;
+
+    object-fit:contain;
+
+    transition:.3s;
+
+}
+
+.institution-logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   BUSINESS BANNER
+=========================== */
+
+.business-banner{
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+    aspect-ratio:1640 / 924;
+
+    background:#f5f5f5;
+
+    border-radius:0 0 25px 25px;
+
+    overflow:hidden;
+
+}
+
+.business-banner-img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+}
+
+.gallery-image{
+
+    width:100%;
+
+    height:450px;
+
+    object-fit:cover;
+
+    border-radius:16px;
+
+}
+
+.carousel{
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+
+    background-color:rgba(0,0,0,.45);
+
+    border-radius:50%;
+
+    padding:20px;
+
+}
+
+.carousel-indicators [data-bs-target]{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+}
+
+@media (max-width:768px){
+
+    .gallery-image{
+
+        height:260px;
+
+    }
+
+}
+
+#business-description{
+
+    background:#fff;
+
+    border-left:4px solid var(--primary-color);
+
+    padding:1.5rem 2rem;
+
+    border-radius:12px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+    color:#495057;
+
+    margin-top:2rem;
+
+}
+
+#business-description p{
+
+    margin-bottom:1.25rem;
+
+}
+
+#business-description strong{
+
+    color:#212529;
+
+    font-weight:600;
+
+}
+
+#business-description br{
+
+    content:"";
+
+    display:block;
+
+    margin-bottom:.8rem;
+
+}
+
+/* ===========================
+   MOBILE DETAIL
+=========================== */
+
+@media(max-width:768px){
+
+    .business-banner{
+
+
+        border-radius:0 0 18px 18px;
+
+    }
+
+    .business-banner-img{
+        margin-top:-30px;
+
+        aspect-ratio:16/10;
+
+    }
+
+    .profile-header{
+
+        margin-top:-45px;
+
+        padding:0 0 40px;
+
+        border-radius:22px 22px 0 0;
+
+    }
+
+    .profile-logo{
+
+        width:120px;
+
+        height:120px;
+
+        margin-top:-30px;
+
+        border-width:5px;
+
+    }
+
+    #business-name{
+
+        font-size:1.8rem;
+
+        margin-top:16px;
+
+        padding:0 12px;
+
+    }
+
+    #business-category{
+
+        font-size:.85rem;
+
+        padding:6px 14px;
+
+    }
+
+    .gallery{
+
+        padding:36px 0;
+
+    }
+
+    .contact-card{
+
+        padding:24px;
+
+        border-radius:18px;
+
+    }
+
+    .btn-contact,
+    .btn-primary-custom{
+
+        padding:12px 16px;
+
+        font-size:.95rem;
+
+    }
+
+}
