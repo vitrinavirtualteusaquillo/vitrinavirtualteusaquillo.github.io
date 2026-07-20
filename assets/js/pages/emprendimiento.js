@@ -109,12 +109,16 @@ if (negocio.imagenes.length === 0) {
 
                     <div class="carousel-item ${index === 0 ? "active" : ""}">
 
-                        <img
-                            src="${imagen}"
-                            class="d-block w-100 gallery-image"
-                            alt="${negocio.nombre}">
+    <div class="gallery-wrapper">
 
-                    </div>
+        <img
+            src="${imagen}"
+            class="gallery-image"
+            alt="${negocio.nombre}">
+
+    </div>
+
+</div>
 
                 `).join("")}
 
