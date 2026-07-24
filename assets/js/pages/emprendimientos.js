@@ -36,6 +36,44 @@ function renderBusinessList(datos) {
         .map(businessCard)
         .join("");
 
+        iniciarAnimaciones();
+
+}
+
+function iniciarAnimaciones() {
+
+    if (window.innerWidth > 768) return;
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+    entry.target.classList.add("show");
+
+} else {
+
+    entry.target.classList.remove("show");
+
+}
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll(".business-card").forEach((card, index) => {
+
+        card.classList.add("animate");
+
+        card.style.transitionDelay = `${index * 80}ms`;
+
+        observer.observe(card);
+
+    });
+
 }
 
 async function cargarCategorias() {

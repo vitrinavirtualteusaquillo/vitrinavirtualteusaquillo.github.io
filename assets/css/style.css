@@ -158,6 +158,70 @@ border-bottom:1px solid #E7DDD5;
 
 }
 
+.hero-top{
+
+    background:#F9EFE5;
+
+    padding:28px 0;
+
+    border-bottom:1px solid #E7D9CF;
+
+}
+
+.hero-top::after{
+
+    content:"✿";
+
+    position:absolute;
+
+    right:50px;
+
+    top:20px;
+
+    font-size:70px;
+
+    color:#E8C8D9;
+
+    opacity:.35;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    background:#F4DCE7;
+
+    color:var(--secondary);
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    letter-spacing:.5px;
+
+}
+
+.hero-tagline{
+
+    margin-top:18px;
+
+    margin-bottom:0;
+
+    max-width:700px;
+
+    color:#6C5A73;
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+
+}
+
 .badge-custom{
 
     background:#F5D7E6;
@@ -176,11 +240,6 @@ color:var(--secondary);
 
 }
 
-.hero{
-
-    background:var(--background);
-
-}
 
 .hero h1,
 .section-title,
@@ -362,7 +421,7 @@ h1,h2,h3{
 
 footer{
 
-        background:#F2E5D8;
+    background:#F2E5D8;
 
     color:var(--secondary);
 
@@ -371,6 +430,52 @@ footer{
     text-align:center;
 
     margin-top:60px;
+
+}
+
+#footer{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#F4E9DF;
+
+    color:var(--secondary);
+
+    padding:45px 0;
+
+}
+
+#footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:320px;
+
+    height:220px;
+
+    background:url("../img/logos/footer-bg.png") no-repeat right bottom;
+
+    background-size:contain;
+
+    opacity:.5;
+
+    pointer-events:none;
+
+}
+
+#footer .container{
+
+    position:relative;
+
+    z-index:2;
 
 }
 
@@ -986,5 +1091,80 @@ border-radius:50%;
     .btn-outline-custom{
         width:100%;
     }
+
+}
+
+/* Tablets */
+@media (max-width: 992px){
+
+    #footer::before{
+
+        width:260px;
+        height:180px;
+
+
+    }
+
+}
+
+/* Celulares */
+@media (max-width: 768px){
+
+    #footer{
+
+        padding:35px 0;
+    }
+
+    #footer::before{
+
+        width:180px;
+        height:130px;
+
+
+    }
+
+}
+
+/* Celulares pequeños */
+@media (max-width: 576px){
+
+    #footer{
+
+        padding:30px 0;
+    }
+
+    #footer::before{
+
+        width:130px;
+        height:95px;
+
+
+    }
+
+}
+
+/* ===========================
+   Animaciones móviles
+=========================== */
+
+.animate{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s ease;
+
+    will-change:opacity, transform;
+
+}
+
+.animate.show{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
