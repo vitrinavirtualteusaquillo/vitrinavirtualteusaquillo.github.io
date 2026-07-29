@@ -22,6 +22,8 @@ async function iniciarPagina() {
 
     }
 
+    window.negocioActual = negocio;
+
     // ===========================
 // GOOGLE ANALYTICS 4
 // VISITA A EMPRENDIMIENTO
@@ -201,9 +203,10 @@ if (negocio.whatsapp) {
 
     html += `
         <a
-            href="https://wa.me/${negocio.whatsapp}?text=${mensaje}"
-            target="_blank"
-            class="btn btn-primary-custom w-100 mb-3">
+    href="https://wa.me/${negocio.whatsapp}?text=${mensaje}"
+    target="_blank"
+    class="btn btn-primary-custom w-100 mb-3"
+    onclick="registrarClickWhatsapp()">
 
             <i class="bi bi-whatsapp"></i>
 
@@ -302,6 +305,24 @@ if (negocio.pagina_web) {
 
 }
     contacto.innerHTML = html;
+
+}
+
+function registrarClickWhatsapp() {
+
+    if (typeof gtag === "function" && window.negocioActual) {
+
+        gtag('event', 'click_whatsapp', {
+
+            nombre_emprendimiento: window.negocioActual.nombre,
+
+            slug_emprendimiento: window.negocioActual.slug,
+
+            categoria_emprendimiento: window.negocioActual.categoria
+
+        });
+
+    }
 
 }
 
