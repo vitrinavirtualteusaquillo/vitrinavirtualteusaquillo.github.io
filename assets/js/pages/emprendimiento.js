@@ -23,6 +23,25 @@ async function iniciarPagina() {
     }
 
     // ===========================
+// GOOGLE ANALYTICS 4
+// VISITA A EMPRENDIMIENTO
+// ===========================
+
+if (typeof gtag === "function") {
+
+    gtag('event', 'view_emprendimiento', {
+
+        nombre_emprendimiento: negocio.nombre,
+
+        slug_emprendimiento: negocio.slug,
+
+        categoria_emprendimiento: negocio.categoria
+
+    });
+
+}
+
+    // ===========================
 // SEO DINÁMICO
 // ===========================
 
