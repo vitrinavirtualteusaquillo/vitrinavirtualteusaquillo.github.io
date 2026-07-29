@@ -87,10 +87,14 @@ async function obtenerEmprendimiento(slug) {
 async function crearEmprendimiento(datos) {
 
     const slug = datos.nombre
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replaceAll(" ", "-");
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, "and")          // opcional, pero recomendable
+    .replace(/[^a-z0-9\s-]/g, "")  // elimina caracteres especiales
+    .trim()
+    .replace(/\s+/g, "-")          // uno o más espacios → un solo guion
+    .replace(/-+/g, "-");          // evita guiones dobles
 
     const { error } = await window.supabaseClient
         .from("emprendimientos")
@@ -135,10 +139,14 @@ async function crearEmprendimiento(datos) {
 async function actualizarEmprendimiento(id, datos) {
 
     const slug = datos.nombre
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replaceAll(" ", "-");
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, "and")          // opcional, pero recomendable
+    .replace(/[^a-z0-9\s-]/g, "")  // elimina caracteres especiales
+    .trim()
+    .replace(/\s+/g, "-")          // uno o más espacios → un solo guion
+    .replace(/-+/g, "-");          // evita guiones dobles
 
     const { error } = await window.supabaseClient
         .from("emprendimientos")
