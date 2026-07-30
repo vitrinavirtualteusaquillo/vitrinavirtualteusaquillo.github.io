@@ -222,12 +222,18 @@ if (negocio.imagenes.length === 0) {
 if (negocio.whatsapp) {
 
     const mensaje = encodeURIComponent(
-        `¡Hola! 😊 Vi tu emprendimiento "${negocio.nombre}" en la Vitrina Virtual de Mujeres Emprendedoras de Teusaquillo y me gustaría recibir más información.`
+        `¡Hola! Vi tu emprendimiento "${negocio.nombre}" en la Vitrina Virtual de Mujeres Emprendedoras de Teusaquillo y me gustaría recibir más información.`
     );
+
+    let telefono = negocio.whatsapp.replace(/\D/g, "");
+
+if (!telefono.startsWith("57")) {
+    telefono = "57" + telefono;
+}
 
     html += `
         <a
-    href="https://wa.me/${negocio.whatsapp}?text=${mensaje}"
+    href="https://wa.me/${telefono}?text=${mensaje}"
     target="_blank"
     class="btn btn-primary-custom w-100 mb-3"
     onclick="registrarClickWhatsapp()">
