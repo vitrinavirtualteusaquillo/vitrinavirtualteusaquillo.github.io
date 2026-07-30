@@ -348,7 +348,9 @@ function registrarClickWhatsapp() {
 
             slug_emprendimiento: window.negocioActual.slug,
 
-            categoria_emprendimiento: window.negocioActual.categoria
+            categoria_emprendimiento: window.negocioActual.categoria,
+
+            transport_type: 'beacon'
 
         });
 
