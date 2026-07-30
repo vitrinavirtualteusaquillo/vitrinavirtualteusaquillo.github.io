@@ -102,6 +102,30 @@ document
     (negocio.descripcion || "")
         .replace(/\n/g, "<br>");
 
+    const description = document.getElementById("business-description");
+const toggleButton = document.getElementById("toggleDescription");
+
+toggleButton.addEventListener("click", () => {
+
+    description.classList.toggle("expanded");
+
+    toggleButton.textContent =
+        description.classList.contains("expanded")
+            ? "Ver menos ▲"
+        : "Ver más ▼";
+
+});
+
+setTimeout(() => {
+
+    if(description.scrollHeight <= 180){
+
+        toggleButton.style.display = "none";
+
+    }
+
+},100);
+
     document.getElementById("business-logo").src = negocio.logo;
 
     document.getElementById("business-cover").src = negocio.portada;
