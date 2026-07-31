@@ -39,7 +39,7 @@ function businessCard(emprendimiento) {
 
                     <a
     href="emprendimiento.html?slug=${emprendimiento.slug}"
-    class="btn btn-outline-custom">
+    class="btn btn-business">
 
     Ver emprendimiento
 

@@ -6,7 +6,7 @@ function categoryCard(categoria) {
             <a href="emprendimientos.html?categoria=${categoria.slug}"
                class="category-link">
 
-                <div class="category-card h-100">
+                <div class="category-card category-${categoria.color} h-100">
 
                     <div class="category-icon">
                         <i class="${categoria.icono}"></i>

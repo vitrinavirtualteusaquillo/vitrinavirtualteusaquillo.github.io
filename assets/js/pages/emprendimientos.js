@@ -100,6 +100,7 @@ function aplicarFiltroDesdeURL() {
     const params = new URLSearchParams(window.location.search);
 
     const categoria = params.get("categoria");
+    const busqueda = params.get("q");
 
     if (categoria) {
 
@@ -107,11 +108,26 @@ function aplicarFiltroDesdeURL() {
 
     }
 
+    if (busqueda) {
+
+        inputBusqueda.value = busqueda;
+
+    }
+
+}
+
+function normalizarTexto(texto) {
+
+    return (texto || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+
 }
 
 function filtrarEmprendimientos() {
 
-    const texto = inputBusqueda.value.toLowerCase().trim();
+    const texto = normalizarTexto(inputBusqueda.value.trim());
 
     const categoria = selectCategoria.value;
 
@@ -125,9 +141,21 @@ function filtrarEmprendimientos() {
 
     }
 
-    resultado = resultado.filter(
-        e => e.nombre.toLowerCase().includes(texto)
+    resultado = resultado.filter(e => {
+
+    return (
+
+        normalizarTexto(e.nombre).includes(texto) ||
+
+        normalizarTexto(e.categoria).includes(texto) ||
+
+        normalizarTexto(e.descripcion_corta).includes(texto) ||
+
+        normalizarTexto(e.descripcion).includes(texto)
+
     );
+
+});
 
     renderBusinessList(resultado);
 

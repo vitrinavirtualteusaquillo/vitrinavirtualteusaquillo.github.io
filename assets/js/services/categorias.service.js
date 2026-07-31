@@ -40,6 +40,8 @@ async function crearCategoria(datos) {
 
             icono: datos.icono,
 
+            color: datos.color,
+
             activa: true
 
         });
@@ -66,7 +68,9 @@ async function actualizarCategoria(id, datos) {
 
             descripcion: datos.descripcion,
 
-            icono: datos.icono
+            icono: datos.icono,
+
+            color: datos.color
 
         })
         .eq("id", id);

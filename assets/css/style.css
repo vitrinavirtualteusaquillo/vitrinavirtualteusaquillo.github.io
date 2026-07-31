@@ -19,12 +19,20 @@
 
     --light-pink:#F99BD3;   /* rosado de apoyo */
 
+    --light-lila:#F7F2FA; /* lila muy claro */;
+
     --white:#FFFFFF;
 
     --radius:18px;
 
     --shadow:0 6px 18px rgba(94,43,122,.08);
     --transition:all .3s ease;
+
+}
+
+html, body{
+
+    overflow-x:hidden;
 
 }
 
@@ -39,7 +47,7 @@ background:var(--background);
 .navbar{
 
     padding:15px 0;
-background:var(--surface);
+background:var(--background);
     border-bottom:1px solid #EFE3D8;
     box-shadow:0 2px 10px rgba(89,32,71,.05);
 
@@ -61,7 +69,7 @@ background:var(--surface);
 
     font-size:.95rem;
 
-    font-weight:600;
+    font-weight:400;
 
     letter-spacing:.2px;
 
@@ -131,9 +139,9 @@ background:var(--surface);
 
 .brand-title{
 
-    font-size:1.35rem;
+    font-size:1rem;
 
-    font-weight:700;
+    font-weight:400;
 
     color:var(--secondary);
 
@@ -237,16 +245,21 @@ color:var(--secondary);
 }
 
 
-.hero h1,
-.section-title,
-h1,h2,h3{
 
-    font-family:'Fraunces',serif;
-
+h2.section-title{
+    font-family:'Fredoka', sans-serif;
+    font-size:clamp(1.8rem,3vw,2.8rem);
+    font-weight:600;
     color:var(--secondary);
+}
 
-    font-weight:700;
-
+p.section-title{
+    font-family:'Fredoka', sans-serif;
+    font-size:clamp(.85rem,2.5vw,2.0rem);
+    font-weight:400;
+    color:var(--text);
+    line-height:.85;
+    text-align:center;
 }
 
 .hero-title{
@@ -256,30 +269,21 @@ h1,h2,h3{
     margin-bottom:1.5rem;
 }
 
-.hero-small{
-    font-family:'Fredoka', sans-serif;
-    font-size:1.2rem;
-    font-weight:400;
-    color:var(--secondary);
-    margin-bottom:.4rem;
-}
 
 .hero-main{
     font-family:'Fredoka', sans-serif;
-    font-size:clamp(2rem,4vw,3.5rem);
-    font-weight:700;
-    color:var(--accent);
-    text-transform:uppercase;
+    font-size:clamp(1.7rem,3.7vw,3.2rem);
+    font-weight:500;
+    color:var(--secondary);
     line-height:.95;
 }
 
 .hero-accent{
     font-family:'Fredoka', sans-serif;
-    font-size:clamp(1.8rem,3.8vw,2.8rem);
-    font-weight:600;
-    color:var(--primary);
-    text-transform:uppercase;
-    line-height:1;
+    font-size:clamp(0.9rem,2.9vw,1.9rem);
+    font-weight:400;
+    color:var(--text);
+    line-height:0.8;
 }
 
 .hero h1{
@@ -354,25 +358,6 @@ h1,h2,h3{
 
 }
 
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:40px;
-
-    font-family:'Fraunces', serif;
-
-    font-size:2.3rem;
-
-    color:var(--secondary);
-
-    font-weight:700;
-
-}
-
-
-
-
 
 .card-image{
 
@@ -388,17 +373,17 @@ h1,h2,h3{
 
 .btn-outline-custom{
 
-    border:2px solid var(--accent);
+    border:2px solid var(--primary);
 
-    color:var(--secondary);
+    color:var(--white);
 
-    background:var(--surface);
+    background:var(--primary);
 
     border-radius:12px;
 
     padding:12px 24px;
 
-    font-weight:600;
+    font-weight:400;
 
 }
 
@@ -410,65 +395,7 @@ h1,h2,h3{
 
 }
 
-footer{
 
-    background:#F2E5D8;
-
-    color:var(--secondary);
-
-    padding:30px 0;
-
-    text-align:center;
-
-    margin-top:60px;
-
-}
-
-#footer{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:#F4E9DF;
-
-    color:var(--secondary);
-
-    padding:45px 0;
-
-}
-
-#footer::before{
-
-    content:"";
-
-    position:absolute;
-
-    right:0;
-
-    bottom:0;
-
-    width:320px;
-
-    height:220px;
-
-    background:url("../img/logos/footer-bg.png") no-repeat right bottom;
-
-    background-size:contain;
-
-    opacity:.5;
-
-    pointer-events:none;
-
-}
-
-#footer .container{
-
-    position:relative;
-
-    z-index:2;
-
-}
 
 @media(max-width:768px){
 
@@ -544,7 +471,7 @@ footer{
 
     width:100%;
 
-    height:260px;
+    height:350px;
 
     object-fit:cover;
 
@@ -562,9 +489,26 @@ footer{
 
 }
 
+.contact-gallery{
+
+    background:var(--light-pink);
+
+}
+
+.carousel-inner{
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:transparent;
+
+}
+
+
 .description{
 
-    background:white;
+    background:var(--background);
 
 }
 
@@ -582,9 +526,115 @@ footer{
 
 }
 
+.description .section-title{
+
+    text-align:center;
+
+}
+
 .products{
 
     padding:70px 0;
+     background:var(--light-lila); /* lila muy claro */
+
+}
+
+.products-banner{
+    margin-top:70px;
+    background:var(--accent);
+    padding:28px 0;
+    margin-bottom: 0;
+}
+
+.products-banner p{
+    margin:0;
+    text-align:center;
+    font-family:'Fredoka', sans-serif;
+    font-size:clamp(1.3rem,2.3vw,1.6rem);
+    font-weight:500;
+    color:var(--text);
+    line-height:0.9;
+}
+
+.about-project{
+    background:var(--background);
+    padding:80px 0;
+}
+
+.project-highlights{
+
+    margin:50px 0 70px;
+
+}
+
+.highlight{
+
+    font-family:'Fredoka', sans-serif;
+
+    font-size:clamp(1.5rem,3vw,2.3rem);
+
+    font-weight:500;
+
+    line-height:1.15;
+
+    margin:0 0 10px;
+
+}
+
+.purple{
+    color:#B58AD6;
+    font-size:clamp(1.3rem,2vw,1.8rem);
+}
+
+.green{
+    color:var(--accent);
+    font-size:clamp(2.8rem,5vw,4.5rem);
+    
+}
+
+.burgundy{
+    color:#7C2348;
+    font-size:clamp(1.8rem,3vw,2.6rem);
+}
+
+.pink{
+    color:var(--primary);
+    font-size:clamp(2.2rem,4vw,3.4rem);
+}
+
+.project-content{
+
+        border-top:1px solid #EEE5F3;
+
+    padding-top:60px;
+
+    margin-top:60px;
+
+}
+
+.project-text{
+    font-size:1.05rem;
+    font-weight:500;
+    line-height:1.9;
+    color:var(--text);
+    text-align:justify;
+}
+
+.project-image{
+
+    width:100%;
+
+    max-width:420px;
+
+    height:auto;
+
+}
+
+.project-footer{
+
+    margin-top:70px;
+
+    text-align:right;
 
 }
 
@@ -604,11 +654,12 @@ footer{
 
     border-radius:14pxpx;
 
-    background:#F7F8FC;
+    background:var(--accent);
 
     text-align:center;
 
     box-shadow:0 5px 14pxpx rgba(0,0,0,.05);
+    height:100%;
 
 }
 
@@ -744,6 +795,80 @@ border-radius:50%;
 
 }
 
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer{
+
+    background:var(--secondary);
+
+    padding:60px 0;
+
+}
+
+.project-logo{
+
+    width:100%;
+
+    max-width:250px;
+
+    height:auto;
+
+}
+
+.footer-logo{
+
+    width:100%;
+
+    max-width:800px;
+
+    height:auto;
+
+}
+
+.footer-person{
+
+    margin-bottom:35px;
+
+}
+
+.footer-person:last-child{
+
+    margin-bottom:0;
+
+}
+
+.footer-person p{
+
+    margin:6px 0 0;
+
+    font-size:1rem;
+
+    font-weight:400;
+
+    color:rgba(255,255,255,.85);
+
+    line-height:1.4;
+
+}
+
+.footer-person h5{
+
+    margin:0;
+
+    font-family:'Fredoka', sans-serif;
+
+    font-size:clamp(1.2rem,2vw,1.6rem);
+
+    font-weight:600;
+
+    color:#FFFFFF;
+
+    line-height:1.2;
+
+}
+
 /* ===================================
    CATEGORY CARD
 =================================== */
@@ -795,9 +920,9 @@ border-radius:50%;
 
     border-radius:50%;
 
-    background:#EFE6F5;      /* morado muy claro */
+    background:var(--primary);      /* morado muy claro */
 
-    color:var(--secondary);  /* morado institucional */
+    color:var(--primary);  /* morado institucional */
 
     display:flex;
 
@@ -813,7 +938,7 @@ border-radius:50%;
 
 .category-card:hover .category-icon{
 
-    background:var(--secondary);
+    background:var(--light-lila);
 
     color:white;
 
@@ -823,9 +948,9 @@ border-radius:50%;
 
 .category-card h4{
 
-    font-size:1.25rem;
+    font-size:1.5rem;
 
-    font-weight:700;
+    font-weight:500;
 
     margin-bottom:15px;
 
@@ -833,7 +958,7 @@ border-radius:50%;
 
 .category-card p{
 
-    color:#666;
+    color:var(--text);
 
     font-size:.95rem;
 
@@ -946,7 +1071,7 @@ border-radius:50%;
 
     font-size:1.3rem;
 
-    font-weight:700;
+    font-weight:500;
 
     margin-bottom:15px;
 
@@ -966,9 +1091,9 @@ border-radius:50%;
 
 .btn-primary-custom{
 
-    background: var(--accent);
+    background: var(--background);
 
-    color: var(--white);!important; 
+    color: var(--text);!important; 
 
     border: none;
 
@@ -976,7 +1101,7 @@ border-radius:50%;
 
     padding: 12px 24px;
 
-    font-weight: 600;
+    font-weight: 400;
 
     letter-spacing: .3px;
 
@@ -1040,6 +1165,44 @@ border-radius:50%;
 
 }
 
+
+/* ===========================
+   BOTÓN TARJETA EMPRENDIMIENTO
+=========================== */
+
+.btn-business{
+
+    background:var(--white);
+
+    color:var(--secondary);
+
+    border:2px solid var(--secondary);
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-weight:400;
+
+    transition:all .3s ease;
+
+}
+
+
+.btn-business:hover{
+
+    background:var(--accent);
+
+    color:white;
+
+    border-color:var(--accent);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 15px rgba(94,43,122,.20);
+
+}
+
 @media (max-width:768px){
 
     .hero{
@@ -1086,54 +1249,8 @@ border-radius:50%;
 
 }
 
-/* Tablets */
-@media (max-width: 992px){
-
-    #footer::before{
-
-        width:260px;
-        height:180px;
 
 
-    }
-
-}
-
-/* Celulares */
-@media (max-width: 768px){
-
-    #footer{
-
-        padding:35px 0;
-    }
-
-    #footer::before{
-
-        width:180px;
-        height:130px;
-
-
-    }
-
-}
-
-/* Celulares pequeños */
-@media (max-width: 576px){
-
-    #footer{
-
-        padding:30px 0;
-    }
-
-    #footer::before{
-
-        width:130px;
-        height:95px;
-
-
-    }
-
-}
 
 /* ===========================
    Animaciones móviles
@@ -1238,3 +1355,418 @@ border-radius:50%;
         cursor:pointer;
 
     }
+
+
+@media(max-width:768px){
+
+    .project-highlights{
+
+        text-align:center;
+
+    }
+
+    .highlight{
+
+        font-size:1.5rem;
+
+    }
+
+    .project-content{
+
+        text-align:center;
+
+    }
+
+    .project-text{
+
+        text-align:left;
+
+        margin-top:30px;
+
+    }
+
+}
+
+@media (max-width:991px){
+
+    .site-footer{
+
+        text-align:center;
+
+    }
+
+    .footer-logo{
+
+        max-width:220px;
+
+        margin-bottom:30px;
+
+    }
+
+    .footer-person{
+
+        margin-bottom:25px;
+
+    }
+
+}
+
+.btn-outline-custom,
+.btn-primary-custom{
+
+    font-size:1rem;
+    padding:12px 24px;
+
+}
+
+
+@media(max-width:576px){
+
+    .btn-outline-custom,
+    .btn-primary-custom{
+
+        width:100%;
+        font-size:.95rem;
+        padding:11px 18px;
+
+    }
+
+}
+
+/* ===========================
+   CATEGORY COLORS
+=========================== */
+
+
+.category-pink{
+
+    background:#EC73A8;
+
+}
+
+
+.category-pink .category-icon{
+
+    background:#F9C6DD;
+
+    color:white;
+
+}
+
+
+
+.category-purple{
+
+    background:#E7D8F5;
+
+}
+
+
+.category-purple .category-icon{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+
+
+.category-green{
+
+    background:#80C2BA;
+
+}
+
+
+.category-green .category-icon{
+
+    background:#C9EAE4;
+
+    color:white;
+
+}
+
+
+
+.category-yellow{
+
+    background:#FFB71B;
+
+}
+
+
+.category-yellow .category-icon{
+
+    background:#FFE6A8;
+
+    color:white;
+
+}
+
+.category-blue{
+
+    background:#2196F3;
+
+}
+
+
+.category-blue .category-icon{
+
+    background:#E3F2FD;
+
+    color:white;
+
+}
+
+
+
+.category-orange{
+
+    background:#F28C28;
+
+}
+
+
+.category-orange .category-icon{
+
+    background:#FFF0E0;
+
+    color:white;
+
+}
+
+
+
+.category-teal{
+
+    background:#009688;
+
+}
+
+
+.category-teal .category-icon{
+
+    background:#DDF4F0;
+
+    color:white;
+
+}
+
+
+
+.category-red{
+
+    background:#FDE3E3;
+
+}
+
+
+.category-red .category-icon{
+
+    background:#E57373;
+
+    color:white;
+
+}
+
+/* ===========================
+   CATEGORÍA DETALLE EMPRENDIMIENTO
+=========================== */
+
+.detail-category{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:var(--secondary);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:1.2rem;
+
+    font-weight:500;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   BOTÓN EXPLORAR EMPRENDIMIENTOS
+=========================== */
+
+.btn-explorar{
+
+    border:2px solid var(--accent);
+
+    color:var(--text);
+
+    background:var(--accent);
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-weight:400;
+
+}
+
+
+.btn-explorar:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.hero-image-link{
+
+    display:block;
+
+}
+
+
+.hero-image-link .hero-image{
+
+    transition:.3s ease;
+
+}
+
+
+.hero-image-link:hover .hero-image{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   LOGOS INSTITUCIONALES
+=========================== */
+
+.top-logos{
+
+    background:var(--background);
+
+    padding:12px 0;
+
+}
+
+
+.top-logo{
+
+    height:65px;
+
+    width:auto;
+
+    object-fit:contain;
+
+}
+/* Responsive */
+@media(max-width:576px){
+
+    .top-logos .container{
+
+        gap:20px;
+
+    }
+
+
+    .top-logo{
+
+        height:35px;
+
+        max-width:45%;
+
+    }
+
+}
+
+.brand-text{
+
+    min-width:0;
+
+}
+
+
+.brand-title{
+
+    white-space:normal;
+
+}
+
+@media(max-width:576px){
+
+    .navbar-brand{
+
+        gap:10px !important;
+
+    }
+
+
+    .brand-title{
+
+        font-size:.75rem;
+
+        line-height:1.1;
+
+    }
+
+
+    .brand-subtitle{
+
+        font-size:.65rem;
+
+    }
+
+}
+
+@media(min-width:576px){
+
+    .project-logo{
+
+        text-align:left;
+        max-width:150px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .purple{
+        font-size:1.2rem;
+    }
+
+    .green{
+        font-size:2.2rem;
+    }
+
+    .burgundy{
+        font-size:1.5rem;
+    }
+
+    .pink{
+        font-size:1.8rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .project-content .col-lg-7{
+
+        text-align:center;
+
+    }
+
+    .project-text{
+
+        text-align:center;
+
+    }
+
+}

@@ -77,3 +77,16 @@ async function iniciarHome() {
 }
 
 iniciarHome();
+
+const buscador = document.getElementById("searchBusiness");
+
+buscador.addEventListener("keydown", (e) => {
+
+    if (e.key !== "Enter") return;
+
+    const texto = buscador.value.trim();
+
+    window.location.href =
+        `emprendimientos.html?q=${encodeURIComponent(texto)}`;
+
+});

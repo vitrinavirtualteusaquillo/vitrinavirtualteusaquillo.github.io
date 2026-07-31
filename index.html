@@ -89,7 +89,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -129,55 +129,67 @@
 
             <div class="col-lg-6">
 
-                <span class="badge-custom">
+                <!--<span class="badge-custom">
                     Mujeres Emprendedoras de Teusaquillo
-                </span>
+                </span> -->
 
                 <h1 class="hero-title">
-    <span class="hero-small">
-        Descubre el talento y la creatividad de los
-    </span>
 
     <span class="hero-main">
-        EMPRENDIMIENTOS
+        Bienvenidos
+a la vitrina virtual de emprendimientos
+de las Mujeres de Teusaquillo.
     </span>
 
     <span class="hero-accent">
-        LOCALES
+        Un espacio para visibilizar, conectar y fortalecer a las mujeres emprendedoras de nuestra localidad.
     </span>
 </h1>
 
-                <p>
+<!--               <p>
                     Explora productos y servicios ofrecidos por mujeres emprendedoras participantes del proyecto de fortalecimiento empresarial de la Alcaldía Local de Teusaquillo.
-                </p>
+                </p>*/ -->
 
                 <div class="position-relative">
 
                     <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary"></i>
 
                         <input
+                        id="searchBusiness"
                             type="search"
                             class="form-control form-control-lg ps-5"
                             placeholder="Buscar emprendimientos...">
 
                 </div>
 
-                <div class="mt-4">
+<div class="mt-4 d-flex gap-3 flex-column flex-sm-row">
 
-                    <a href="emprendimientos.html" class="btn btn-lg btn-outline-custom">
-                        Explorar emprendimientos
-                    </a>
+    <a href="emprendimientos.html" class="btn btn-explorar">
+        Explorar emprendimientos
+    </a>
 
-                </div>
+<a 
+    href="https://forms.gle/hauRYjMUtaBRpJS18"
+    target="_blank"
+    class="btn btn-outline-custom">
+    <i class="bi bi-shop-window" me-2"></i>
+    Haz parte de nuestra vitrina
+</a>
+
+</div>
 
             </div>
 
             <div class="col-lg-6">
 
-                <img
-                    src="assets/img/hero/hero.jpg"
-                    class="hero-image"
-                    alt="Mujeres emprendedoras">
+                <a href="acerca.html" class="hero-image-link">
+
+    <img
+        src="assets/img/hero/hero.jpg"
+        class="hero-image"
+        alt="Mujeres emprendedoras">
+
+</a>
 
             </div>
 
@@ -191,9 +203,9 @@
 
     <div class="container">
 
-        <h2 class="section-title">
-            Explora por categorías
-        </h2>
+        <p class="section-title">
+             Explora y conoce toda la oferta a través de las siguientes categorías. Apoyemos el talento, la economía y el comercio de nuestra localidad, de esta manera contribuimos a la autonomíaeconómica de nuestras emprendedoras.
+        </p>
 
         <div
             id="categories-container"
@@ -233,78 +245,84 @@
 
     </div>
 
+        <!-- Franja inferior -->
+    <div class="products-banner">
+        <div class="container">
+            <p>
+                Promover el liderazgo de las mujeres es, en esencia, construir sociedades más justas para todas las personas.
+            </p>
+        </div>
+    </div>
+
 </section>
 
-<section class="py-5 bg-white">
+<section class="about-project">
 
     <div class="container">
 
-        <div class="row justify-content-center">
+        <!-- Título -->
+        <div class="section-header text-center">
 
-            <div class="col-lg-9 text-center">
-
-                <h2 class="section-title">
-                    Acerca del proyecto
-                </h2>
-
-                <p class="lead text-secondary mb-5">
-
-                    La Vitrina Virtual de Mujeres Emprendedoras de Teusaquillo
-                    es una iniciativa que busca fortalecer la visibilidad de los
-                    emprendimientos locales liderados por mujeres, facilitando el
-                    acceso de la ciudadanía a sus productos y servicios.
-
-                </p>
-
-            </div>
+            <h2 class="section-title">
+                Conoce el proyecto
+            </h2>
 
         </div>
 
-        <div class="row text-center g-4 mb-5">
+        <!-- Títulos de colores -->
+        <div class="project-highlights">
 
-            <div class="col-md-4">
+            <h3 class="highlight purple">
+                Contrato No. 535 de 2025
+            </h3>
 
-                <img src="assets/img/institutions/foro-civico.png"
-                     class="institution-logo"
-                     alt="Foro Cívico">
+            <h3 class="highlight green">
+                Las mujeres
+            </h3>
 
-            </div>
+            <h3 class="highlight burgundy">
+                en Teusaquillo construimos
+            </h3>
 
-            <div class="col-md-4">
-
-                <img src="assets/img/institutions/alcaldia.png"
-                     class="institution-logo"
-                     alt="Alcaldía Local de Teusaquillo">
-
-            </div>
-
-            <div class="col-md-4">
-
-                <img src="assets/img/institutions/sdmujer.png"
-                     class="institution-logo"
-                     alt="Secretaría Distrital de la Mujer">
-
-            </div>
+            <h3 class="highlight pink">
+                autonomía y ciudadanía
+            </h3>
 
         </div>
 
-        <div class="text-center">
+        <!-- Contenido -->
+<div class="row align-items-center g-5 project-content">
 
-            <p class="mb-2">
+    <!-- Imagen -->
+    <div class="col-lg-5 text-center">
 
-                <i class="bi bi-envelope-fill text-primary"></i>
+        <img
+            src="assets/img/institutions/proyecto.png"
+            class="project-image img-fluid"
+            alt="Proyecto">
 
-                mujerteusaquillo@forocivico.com
+    </div>
 
-            </p>
+    <!-- Texto -->
+    <div class="col-lg-7">
 
-            <a
-                href="acerca.html"
-                class="btn btn-search">
+        <p class="project-text">
 
-                Conoce más del proyecto
+            Esta página fue elaborada por: La Fundación Foro Cívico–Escuela de Democracia, Derechos Humanos y Participación Ciudadana, en el marco del contrato CPS 235 – 2025 con la Alcaldía Local de Teusaquillo que tiene como objetivo contribuir al ejercicio del derecho a la participación política y la autonomía económica de las mujeres en sus diversidades de Teusaquillo, a través de espacios de formación en herramientas de incidencia y estrategias financieras, económicas y comerciales, fortalecimiento de organizaciones y el empoderamiento político con enfoque de género, diferencial y de derechos humanos. En el marco del proyecto de inversión 2325: “Teusaquillo, cuida y fortalece” - “Las mujeres en Teusaquillo construimos autonomía y ciudadanía”.
 
-            </a>
+        </p>
+
+    </div>
+
+</div>
+
+        <!-- Logo inferior -->
+        <div class="project-footer">
+
+            <img
+                src="assets/img/logos/foro-civico.png"
+                class="project-logo"
+                alt="Foro Cívico">
 
         </div>
 

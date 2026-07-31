@@ -66,6 +66,9 @@ async function iniciarPagina() {
         document.getElementById("categoriaIcono").value =
             categoria.icono || "";
 
+        document.getElementById("categoriaColor").value =
+    categoria.color || "pink";
+
         modalCategoria.show();
 
     });
@@ -123,6 +126,8 @@ document
 
         document.getElementById("categoriaIcono").value = "";
 
+        document.getElementById("categoriaColor").value = "pink";
+
         modalCategoria.show();
 
     });
@@ -139,7 +144,9 @@ const datos = {
 
     descripcion: document.getElementById("categoriaDescripcion").value,
 
-    icono: document.getElementById("categoriaIcono").value
+    icono: document.getElementById("categoriaIcono").value,
+
+    color: document.getElementById("categoriaColor").value
 
 };
 
